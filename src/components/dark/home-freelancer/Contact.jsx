@@ -20,20 +20,19 @@ function Contact() {
 
   const sendEmail = (e) => {
     e.preventDefault();
-
-    emailjs.sendForm('service_9x164y6', 'template_wyaswos', e.target, 'H2kylh8ByiKce5ec3')
-      .then((result) => {
+  
+    emailjs
+      .sendForm('service_uige2aa', 'template_izl63xi', e.target, '4VlaCkKCEWTAnBx6i')
+      .then(
+        (result) => {
           console.log(result.text);
-          toast('Good Job!', {
-            icon: '👏',
-          });
-          
-         
-      
-      }, (error) => {
-          console.log(error.text);
-          alert('Failed to send email.');
-      });
+          toast.success('Email sent successfully');
+        },
+        (error) => {
+          console.error(error.text);
+          toast.error('Failed to send email. Please try again later.');
+        }
+      );
   };
 
   return (

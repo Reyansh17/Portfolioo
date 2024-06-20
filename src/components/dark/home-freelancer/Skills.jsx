@@ -5,9 +5,9 @@ function Skills() {
     <div className="my-skills2">
       <div className="container">
         <div className="sec-head text-center mb-80">
-          <h6 className="sub-title main-color mb-15">Our Portfolio</h6>
+          <h6 className="sub-title main-color mb-15"></h6>
           <h2>
-            Our featured <span className="fw-200">projects</span>
+            My Skills &<span className="fw-200">Expertise</span>
           </h2>
         </div>
         <div className="row md-marg">
