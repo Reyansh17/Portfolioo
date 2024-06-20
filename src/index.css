@@ -1,0 +1,88 @@
+/* .swiper3 a .item img {
+  -o-object-fit: cover;
+  object-fit: cover;
+  -o-object-position: center;
+  object-position: center;
+} */
+.parallax-img {
+  position: absolute;
+  top: 50px;
+}
+.parallax-wrapper {
+  position: relative;
+}
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 28%;
+  height: 28%;
+  display: block;
+}
+.hover-i {
+  /* z-index: -1; */
+  position: fixed;
+  top: 15vh !important;
+  left: 20vw !important;
+  width: 60vw;
+  height: 70vh;
+  min-width: 600px;
+  min-height: 450px;
+  overflow: hidden;
+}
+@media screen and (max-width: 700px) {
+  .hover-i {
+    left: 5vw !important;
+  }
+}
+.hover-i img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  transform: translateX(-100%);
+  transition: transform 0.4s ease-in-out;
+}
+.item-d:hover img {
+  transform: translateX(0);
+}
+.item-d:active img {
+  transform: translateX(100%);
+}
+
+.out-ani {
+  animation: photo-hide 0.5s forwards;
+}
+@keyframes photo-appear {
+  0% {
+    transform: translateX(-100%);
+  }
+
+  100% {
+    transform: translateX(0%);
+  }
+}
+
+@keyframes photo-hide {
+  0% {
+    transform: translateX(0%);
+  }
+
+  100% {
+    transform: translateX(100%);
+  }
+}
+.scroll-container {
+  display: flex;
+  overflow-x: scroll;
+  width: 100vw;
+  height: 100vh;
+}
+
+.panel {
+  flex: 0 0 auto;
+  width: 100vw;
+  height: 100vh;
+}
+.motion {
+  display: flex;
+  gap: 4;
+}
