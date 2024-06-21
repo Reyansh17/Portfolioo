@@ -93,7 +93,7 @@ function Contact() {
                 I’d love to hear from you!
               </p>
               <div className="phone fz-30 fw-600 mt-80 underline main-color">
-                <a href="#0">+91 8112239954</a>
+                <a href="tel:+8112239954">+91 8112239954</a>
               </div>
               <ul className="rest social-text d-flex mt-40">
                 <li className="mr-30">
