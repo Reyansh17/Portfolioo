@@ -8,8 +8,9 @@ function Contact() {
   const [form, setForm] = useState({
     name: "",
     email: "",
+    subject: "",
     message: "",
-    subject: ""
+   
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isVisible, setVisible] = useState(false);
