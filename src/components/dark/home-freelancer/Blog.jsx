@@ -11,7 +11,7 @@ function Blog() {
               Read My <span className="fw-200">Articles</span>
             </h2>
             <div className="ml-auto">
-              <a href="/dark/blog-list" className="go-more">
+              <a href="https://medium.com/@gahlotreyansh17" className="go-more" target='_blank'>
                 <span className="text">View all Articles</span>
                 <span className="icon ti-arrow-top-right"></span>
               </a>

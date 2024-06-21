@@ -6,7 +6,7 @@ function Footer() {
       <div className="container">
         <div className="row">
           <div className="col-lg-4 col-md-6 md-mb15">
-            <div className="logo icon-img-100 ">
+            <div className="logo icon-img-100 align-content-center ">
               <img src="/dark/assets/imgs/Reyanshlogo.png" alt="" />
             </div>
           </div>
@@ -20,21 +20,7 @@ function Footer() {
               </p>
             </div>
           </div>
-          <div className="col-lg-4 col-md-6 order-md-2 md-mb15">
-            <div className="links d-flex justify-content-end">
-              <ul className="rest d-flex align-items-center mt-50">
-                <li>
-                  <a href="/dark/page-FAQS">FAQ</a>
-                </li>
-                <li className="ml-30">
-                  <a href="/dark/page-about3"></a>
-                </li>
-                <li className="ml-30">
-                  <a href="/dark/page-contact3">Contact Us</a>
-                </li>
-              </ul>
-            </div>
-          </div>
+          
         </div>
       </div>
     </footer>

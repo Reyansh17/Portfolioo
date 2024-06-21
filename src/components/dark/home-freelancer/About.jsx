@@ -102,6 +102,7 @@ function About() {
               <a
                 href="/cv.pdf"
                 className="butn butn-md main-colorbg radius-30 mt-40"
+                target='_blank'
               >
                 <span className="text-dark">Dwonload CV</span>
               </a>

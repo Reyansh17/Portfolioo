@@ -11,10 +11,10 @@ function Services() {
               What I <span className="fw-200">Offer</span>
             </h2>
             <div className="ml-auto">
-              <a href="/services" className="go-more">
+              {/* <a href="/services" className="go-more">
                 <span className="text">View all services</span>
                 <span className="icon ti-arrow-top-right"></span>
-              </a>
+              </a> */}
             </div>
           </div>
         </div>
@@ -27,14 +27,14 @@ function Services() {
                 Live workshop where we define the main problems and challenges
                 before building a strategic plan moving forward.
               </p>
-              <a href="/dark/page-services-details" className="rmore mt-30">
+              {/* <a href="/dark/page-services-details" className="rmore mt-30">
                 <span className="sub-title">Read More</span>
                 <img
                   src="/dark/assets/imgs/arrow-right.png"
                   alt=""
                   className="icon-img-20 ml-5"
                 />
-              </a>
+              </a> */}
             </div>
           </div>
           <div className="col-lg-4">
@@ -45,32 +45,32 @@ function Services() {
                 Live workshop where we define the main problems and challenges
                 before building a strategic plan moving forward.
               </p>
-              <a href="/dark/page-services-details" className="rmore mt-30">
+              {/* <a href="/dark/page-services-details" className="rmore mt-30">
                 <span className="sub-title">Read More</span>
                 <img
                   src="/dark/assets/imgs/arrow-right.png"
                   alt=""
                   className="icon-img-20 ml-5"
                 />
-              </a>
+              </a> */}
             </div>
           </div>
           <div className="col-lg-4">
             <div className="item-box radius-15">
               <div className="ti-rocket main-color fz-50 mb-40"></div>
-              <h5 className="mb-15">Digital Marketing</h5>
+              <h5 className="mb-15">Graphic Designing</h5>
               <p>
                 Live workshop where we define the main problems and challenges
                 before building a strategic plan moving forward.
               </p>
-              <a href="/dark/page-services-details" className="rmore mt-30">
+              {/* <a href="/dark/page-services-details" className="rmore mt-30">
                 <span className="sub-title">Read More</span>
                 <img
                   src="/dark/assets/imgs/arrow-right.png"
                   alt=""
                   className="icon-img-20 ml-5"
                 />
-              </a>
+              </a> */}
             </div>
           </div>
         </div>

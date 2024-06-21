@@ -78,7 +78,7 @@ function Testimonials() {
                       <span className="tag sub-title mb-30 main-color">
                         Design Quality
                       </span>
-                      <p>{item.desc}</p>
+                      <p className=' ' style={{ fontStyle: 'italic' }}>{item.desc}</p>
                     </div>
                     <div className="info mt-40">
                       <div className="img-curv">

@@ -46,7 +46,7 @@ function Navbar() {
               </li>
               <li className="nav-item" data-scroll-nav="3">
                 <Link className="nav-link" to="portfolio" smooth={true} duration={500}>
-                  <span className="rolling-text">Portfolio</span>
+                  <span className="rolling-text">Projects</span>
                 </Link>
               </li>
               <li className="nav-item" data-scroll-nav="4">
@@ -123,7 +123,7 @@ function Navbar() {
                     <div className="o-hidden">
                       <div className="link cursor-pointer dmenu">
                         <Link className="fill-text" to="portfolio" smooth={true} duration={500}>
-                          Portfolio
+                          Projects
                         </Link>
                       </div>
                     </div>

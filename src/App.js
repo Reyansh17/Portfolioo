@@ -10,6 +10,7 @@ function App() {
     <Router>
       <Routes>
       <Route path="/" element={<HomeFreelancer />} />
+      <Route path='/cv' element='/cv.pdf'/>
       
         
         
