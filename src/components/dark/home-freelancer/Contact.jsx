@@ -1,13 +1,31 @@
 'use client';
 import React, { useEffect, useRef, useState } from 'react';
-import emailjs from 'emailjs-com';
+import emailjs from '@emailjs/browser';
 import toast, { Toaster } from 'react-hot-toast';
 
 
 
 function Contact() {
+  const formRef = useRef();
+  const [form, setForm] = useState({
+    name: "",
+    email: "",
+    message: "",
+    subject:""
+  });
   const [isVisible, setVisible] = useState(false);
+  
   const domRef = useRef();
+
+  const handlechange= (e) => {
+    const { target } = e;
+    const { name, value } = target;
+
+    setForm({
+      ...form,
+      [name]: value,
+    });
+  };
 
   useEffect(() => {
     const observer = new IntersectionObserver((entries) => {
@@ -20,17 +38,41 @@ function Contact() {
 
   const sendEmail = (e) => {
     e.preventDefault();
-  
+     setVisible(true)
     emailjs
-      .sendForm('service_uige2aa', 'template_au99tio', e.target, '4VlaCkKCEWTAnBx6i')
+    .send(
+      'service_uige2aa',
+      'template_au99tio',
+     
+      {
+        from_name: form.name,
+        to_name: "Reyansh GAhlot",
+        from_email: form.email,
+        to_email: "rgahlot_be22@thapar.edu",
+        subject:form.subject,
+        message: form.message,
+      },
+        '4VlaCkKCEWTAnBx6i'
+      
+    )
+      
       .then(
-        (result) => {
-          console.log(result.text);
-          toast.success('Email sent successfully');
+        () => {
+          setVisible(false);
+          alert("Thank you. I will get back to you as soon as possible.");
+
+          setForm({
+            name: "",
+            email: "",
+            subject:"",
+            message: "",
+          });
         },
         (error) => {
-          console.error(error.text);
-          toast.error('Failed to send email. Please try again later.');
+          setVisible(false);
+          console.error(error);
+
+          alert("Ahh, something went wrong. Please try again.");
         }
       );
   };
@@ -85,7 +127,7 @@ function Contact() {
           </div>
           <div className="col-lg-6 offset-lg-1 valign">
             <div className="full-width">
-              <form id="contact-form" onSubmit={sendEmail}>
+              <form id="contact-form" ref={formRef} onSubmit={sendEmail}>
                 <div className="messages"></div>
 
                 <div className="controls row">
@@ -97,6 +139,8 @@ function Contact() {
                         name="name"
                         placeholder="Name"
                         required="required"
+                        value={form.name}
+                        onChange={handlechange}
                       />
                     </div>
                   </div>
@@ -109,6 +153,8 @@ function Contact() {
                         name="email"
                         placeholder="Email"
                         required="required"
+                        value={form.email}
+                        onChange={handlechange}
                       />
                     </div>
                   </div>
@@ -120,6 +166,10 @@ function Contact() {
                         type="text"
                         name="subject"
                         placeholder="Subject"
+                        value={form.subject}
+                        onChange={handlechange}
+                       
+
                       />
                     </div>
                   </div>
@@ -132,14 +182,19 @@ function Contact() {
                         placeholder="Message"
                         rows="4"
                         required="required"
+                        value={form.message}
+                        onChange={handlechange}
+
                       ></textarea>
                     </div>
                     <div className="mt-30">
                       <button
                         type="submit"
                         className="butn butn-full butn-bord radius-30"
+                      
                       >
-                        <span className="text">Let&#39;s Talk</span>
+                      
+                        {isVisible?"send":"sent"}
                       </button>
                     </div>
                   </div>
