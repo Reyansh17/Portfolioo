@@ -18,8 +18,8 @@ function Portfolio() {
       640: {
         loop: true,
         slidesPerView: 1,
-        spaceBetween: 20,
-        centeredSlides: false,
+        spaceBetween: 10,
+        centeredSlides: true,
       },
       // when window width is >= 768px
       768: {
@@ -80,7 +80,7 @@ function Portfolio() {
                       <p>{item.subTitle}</p>
                     </div>
                     <div className="ml-auto">
-                      <a href='#0' className="rmore">
+                      <a href={item.link}aclassName="rmore">
                         <img
                           src="/dark/assets/imgs/arrow-right.png"
                           alt=""
