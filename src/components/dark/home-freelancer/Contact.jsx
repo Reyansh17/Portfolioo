@@ -3,24 +3,21 @@ import React, { useEffect, useRef, useState } from 'react';
 import emailjs from '@emailjs/browser';
 import toast, { Toaster } from 'react-hot-toast';
 
-
-
 function Contact() {
   const formRef = useRef();
   const [form, setForm] = useState({
     name: "",
     email: "",
     message: "",
-    subject:""
+    subject: ""
   });
+  const [isSubmitting, setIsSubmitting] = useState(false);
   const [isVisible, setVisible] = useState(false);
   
   const domRef = useRef();
 
-  const handlechange= (e) => {
-    const { target } = e;
-    const { name, value } = target;
-
+  const handleChange = (e) => {
+    const { name, value } = e.target;
     setForm({
       ...form,
       [name]: value,
@@ -38,43 +35,35 @@ function Contact() {
 
   const sendEmail = (e) => {
     e.preventDefault();
-     setVisible(true)
-    emailjs
-    .send(
+    setIsSubmitting(true);
+    
+    emailjs.send(
       'service_uige2aa',
       'template_au99tio',
-     
       {
         from_name: form.name,
-        to_name: "Reyansh GAhlot",
+        to_name: "Reyansh Gahlot",
         from_email: form.email,
         to_email: "rgahlot_be22@thapar.edu",
-        subject:form.subject,
+        subject: form.subject,
         message: form.message,
       },
-        '4VlaCkKCEWTAnBx6i'
-      
+      '4VlaCkKCEWTAnBx6i'
     )
-      
-      .then(
-        () => {
-          setVisible(false);
-          alert("Thank you. I will get back to you as soon as possible.");
-
-          setForm({
-            name: "",
-            email: "",
-            subject:"",
-            message: "",
-          });
-        },
-        (error) => {
-          setVisible(false);
-          console.error(error);
-
-          alert("Ahh, something went wrong. Please try again.");
-        }
-      );
+    .then(() => {
+      setIsSubmitting(false);
+      alert("Thank you. I will get back to you as soon as possible.");
+      setForm({
+        name: "",
+        email: "",
+        subject: "",
+        message: "",
+      });
+    }, (error) => {
+      setIsSubmitting(false);
+      alert("Ahh, something went wrong. Please try again.");
+      console.error(error);
+    });
   };
 
   return (
@@ -82,6 +71,7 @@ function Contact() {
       className="contact-crev section-padding bord-thin-bottom bord-thin-top"
       data-scroll-index="6"
     >
+      <Toaster />
       <div className="container">
         <div className="row">
           <div className="col-lg-5">
@@ -94,7 +84,7 @@ function Contact() {
                 ref={domRef}
               >
                 <span className="rotate-text">
-                  Let&#39; Connect
+                  Let&#39;s Connect
                   <span className="fw-200">Collaborate and Innovate Together!</span>
                 </span>
               </h2>
@@ -140,7 +130,7 @@ function Contact() {
                         placeholder="Name"
                         required="required"
                         value={form.name}
-                        onChange={handlechange}
+                        onChange={handleChange}
                       />
                     </div>
                   </div>
@@ -154,7 +144,7 @@ function Contact() {
                         placeholder="Email"
                         required="required"
                         value={form.email}
-                        onChange={handlechange}
+                        onChange={handleChange}
                       />
                     </div>
                   </div>
@@ -167,9 +157,7 @@ function Contact() {
                         name="subject"
                         placeholder="Subject"
                         value={form.subject}
-                        onChange={handlechange}
-                       
-
+                        onChange={handleChange}
                       />
                     </div>
                   </div>
@@ -183,18 +171,16 @@ function Contact() {
                         rows="4"
                         required="required"
                         value={form.message}
-                        onChange={handlechange}
-
+                        onChange={handleChange}
                       ></textarea>
                     </div>
                     <div className="mt-30">
                       <button
                         type="submit"
                         className="butn butn-full butn-bord radius-30"
-                      
+                        disabled={isSubmitting}
                       >
-                      
-                        {isVisible?"sent":"send"}
+                        {isSubmitting ? "Sending..." : "Send"}
                       </button>
                     </div>
                   </div>
