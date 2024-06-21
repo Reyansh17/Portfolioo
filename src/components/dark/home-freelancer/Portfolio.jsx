@@ -18,8 +18,8 @@ function Portfolio() {
       640: {
         loop: true,
         slidesPerView: 1,
-        spaceBetween: 10,
-        centeredSlides: true,
+        spaceBetween: 20,
+        centeredSlides: false,
       },
       // when window width is >= 768px
       768: {
@@ -80,7 +80,7 @@ function Portfolio() {
                       <p>{item.subTitle}</p>
                     </div>
                     <div className="ml-auto">
-                      <a href={item.link}aclassName="rmore">
+                      <a href='https://electionspatiala.com' className="rmore">
                         <img
                           src="/dark/assets/imgs/arrow-right.png"
                           alt=""

@@ -16,5 +16,11 @@
     "title": "CTF ",
     "subTitle": "Flask",
     "link": "https://github.com/Reyansh17/CTF"
+  },
+  {
+    "img": "/dark/assets/imgs/works/portal.png",
+    "title": "Election Portal",
+    "subTitle": "Full Stack",
+    "link": "https://electionspatiala.com/"
   }
 ]
