@@ -170,18 +170,19 @@ function Navbar() {
                 <div className="item mb-50">
                   <h6 className="sub-title mb-15 opacity-7">Social Media</h6>
                   <ul className="rest social-text">
-                    <li className="mb-10">
-                      <a href="#0" className="hover-this">
-                        <span className="hover-anim">Twitter</span>
+                  <li className="mb-10">
+                      <a href="https://github.com/Reyansh17" className="hover-this">
+                        <span className="hover-anim">Github</span>
                       </a>
                     </li>
+                   
                     <li className="mb-10">
-                      <a href="#0" className="hover-this">
+                      <a href="https://www.linkedin.com/in/reyanshgahlot/" className="hover-this">
                         <span className="hover-anim">LinkedIn</span>
                       </a>
                     </li>
                     <li>
-                      <a href="#0" className="hover-this">
+                      <a href="https://www.instagram.com/reyansh_747?igsh=aGR5YzBrYXdkcG1l" className="hover-this">
                         <span className="hover-anim">Instagram</span>
                       </a>
                     </li>
