@@ -170,7 +170,7 @@ function Contact() {
                         name="message"
                         placeholder="Message"
                         rows="4"
-                        required="required"
+                    
                         value={form.message}
                         onChange={handleChange}
                       ></textarea>
