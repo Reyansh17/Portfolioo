@@ -194,7 +194,7 @@ function Contact() {
                       
                       >
                       
-                        {isVisible?"send":"sent"}
+                        {isVisible?"sent":"send"}
                       </button>
                     </div>
                   </div>
