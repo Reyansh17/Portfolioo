@@ -151,7 +151,7 @@ function Contact() {
                   </div>
 
                   <div className="col-12">
-                    <div className="form-group mb-30">
+                    {/* <div className="form-group mb-30">
                       <input
                         id="form_subject"
                         type="text"
@@ -160,20 +160,20 @@ function Contact() {
                         value={form.subject}
                         onChange={handleChange}
                       />
-                    </div>
+                    </div> */}
                   </div>
 
                   <div className="col-12">
                     <div className="form-group">
-                      <input
-                        id="form_message"
-                        name="message"
+                      <textarea
+                         id="form_subject"
+                        type="text"
+                        name="subject"
                         placeholder="Message"
-                        rows="4"
-        
-                        value={form.message}
+                        value={form.subject}
                         onChange={handleChange}
-                      ></input>
+                        rows="4"
+                      ></textarea>
                     </div>
                     <div className="mt-30">
                       <button
