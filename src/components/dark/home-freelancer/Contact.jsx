@@ -165,15 +165,15 @@ function Contact() {
 
                   <div className="col-12">
                     <div className="form-group">
-                      <textarea
+                      <input
                         id="form_message"
                         name="message"
                         placeholder="Message"
                         rows="4"
-                    
+        
                         value={form.message}
                         onChange={handleChange}
-                      ></textarea>
+                      ></input>
                     </div>
                     <div className="mt-30">
                       <button
