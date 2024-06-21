@@ -191,10 +191,10 @@ function Navbar() {
                 <div className="item mb-40">
                   <h6 className="sub-title mb-15 opacity-7">Contact Me</h6>
                   <h5>
-                    <a href="#0">rgahlot_be22@thapar.edu.com</a>
+                    <a href="mailto:rgahlot_be22@thapar.edu">rgahlot_be22@thapar.edu.com</a>
                   </h5>
                   <h5 className="underline mt-10">
-                    <a href="#0">+91 8112239954</a>
+                    <a href="tel:+8112239954">+91 8112239954</a>
                   </h5>
                 </div>
               </div>

@@ -24,8 +24,7 @@ function Services() {
               <div className="ti-paint-bucket main-color fz-50 mb-40"></div>
               <h5 className="mb-15">UI / UX Design</h5>
               <p>
-                Live workshop where we define the main problems and challenges
-                before building a strategic plan moving forward.
+              Designing intuitive and engaging user experiences that delight users and enhance usability
               </p>
               {/* <a href="/dark/page-services-details" className="rmore mt-30">
                 <span className="sub-title">Read More</span>
@@ -42,8 +41,7 @@ function Services() {
               <div className="ti-layout-slider main-color fz-50 mb-40"></div>
               <h5 className="mb-15">Web Development</h5>
               <p>
-                Live workshop where we define the main problems and challenges
-                before building a strategic plan moving forward.
+              Transforming your ideas into dynamic, high-performance websites that elevate your online presence.
               </p>
               {/* <a href="/dark/page-services-details" className="rmore mt-30">
                 <span className="sub-title">Read More</span>
@@ -60,8 +58,7 @@ function Services() {
               <div className="ti-rocket main-color fz-50 mb-40"></div>
               <h5 className="mb-15">Graphic Designing</h5>
               <p>
-                Live workshop where we define the main problems and challenges
-                before building a strategic plan moving forward.
+              Crafting visually stunning designs that captivate your audience and communicate your brand's message
               </p>
               {/* <a href="/dark/page-services-details" className="rmore mt-30">
                 <span className="sub-title">Read More</span>

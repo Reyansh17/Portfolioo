@@ -80,7 +80,7 @@ function Portfolio() {
                       <p>{item.subTitle}</p>
                     </div>
                     <div className="ml-auto">
-                      <a href='https://electionspatiala.com/electionspatiala.com' className="rmore">
+                      <a href='#0' className="rmore">
                         <img
                           src="/dark/assets/imgs/arrow-right.png"
                           alt=""
