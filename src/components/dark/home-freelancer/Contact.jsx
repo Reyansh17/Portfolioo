@@ -22,7 +22,7 @@ function Contact() {
     e.preventDefault();
   
     emailjs
-      .sendForm( process.env.ID, process.env.TEMP, e.target, process.env.KEY)
+      .sendForm('service_uige2aa', 'template_au99tio', e.target, '4VlaCkKCEWTAnBx6i')
       .then(
         (result) => {
           console.log(result.text);
