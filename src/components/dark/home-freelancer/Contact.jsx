@@ -46,8 +46,8 @@ function Contact() {
         to_name: "Reyansh Gahlot",
         from_email: form.email,
         to_email: "rgahlot_be22@thapar.edu",
-        subject: form.subject,
-        message: form.message,
+        from_subject: form.subject,
+        from_message: form.message,
       },
       '4VlaCkKCEWTAnBx6i'
     )
