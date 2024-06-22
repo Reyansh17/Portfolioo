@@ -37,6 +37,11 @@ function Contact() {
   const sendEmail = (e) => {
     e.preventDefault();
     setIsSubmitting(true);
+    console.log("Sending Email with the following data:");
+    console.log("Name:", form.name);
+    console.log("Email:", form.email);
+    console.log("Subject:", form.subject);
+    console.log("Message:", form.message);
     
     emailjs.send(
       'service_uige2aa',
@@ -151,7 +156,7 @@ function Contact() {
                   </div>
 
                   <div className="col-12">
-                    {/* <div className="form-group mb-30">
+                    <div className="form-group mb-30">
                       <input
                         
                         type="text"
@@ -161,7 +166,7 @@ function Contact() {
                         value={form.subject}
                         onChange={handleChange}
                       />
-                    </div> */}
+                    </div>
                   </div>
 
                   <div className="col-12">
