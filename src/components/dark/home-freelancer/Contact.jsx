@@ -146,8 +146,8 @@ function Contact() {
                     <div className="form-group mb-30">
                       <input
                       
-                        type="email"
-                        name="text"
+                        type="text"
+                        name="email"
                         placeholder="Email"
                         required="required"
                         value={form.email}
