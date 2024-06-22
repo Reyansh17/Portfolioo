@@ -29,9 +29,10 @@ function Contact() {
     const observer = new IntersectionObserver((entries) => {
       entries.forEach((entry) => setVisible(entry.isIntersecting));
     });
-
-    observer.observe(domRef.current);
-    return () => observer.unobserve(domRef.current);
+  
+    const currentRef = domRef.current;
+    observer.observe(currentRef);
+    return () => observer.unobserve(currentRef);
   }, []);
 
   const sendEmail = (e) => {
@@ -146,7 +147,7 @@ function Contact() {
                       <input
                       
                         type="email"
-                        name="email"
+                        name="text"
                         placeholder="Email"
                         required="required"
                         value={form.email}
