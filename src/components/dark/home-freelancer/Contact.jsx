@@ -151,7 +151,7 @@ function Contact() {
                   </div>
 
                   <div className="col-12">
-                    <div className="form-group mb-30">
+                    {/* <div className="form-group mb-30">
                       <input
                         
                         type="text"
@@ -161,7 +161,7 @@ function Contact() {
                         value={form.subject}
                         onChange={handleChange}
                       />
-                    </div>
+                    </div> */}
                   </div>
 
                   <div className="col-12">
