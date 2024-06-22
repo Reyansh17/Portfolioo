@@ -125,7 +125,7 @@ function Contact() {
                   <div className="col-lg-6">
                     <div className="form-group mb-30">
                       <input
-                        id="form_name"
+                      
                         type="text"
                         name="name"
                         placeholder="Name"
@@ -139,7 +139,7 @@ function Contact() {
                   <div className="col-lg-6">
                     <div className="form-group mb-30">
                       <input
-                        id="form_email"
+                      
                         type="email"
                         name="email"
                         placeholder="Email"
@@ -153,10 +153,11 @@ function Contact() {
                   <div className="col-12">
                     <div className="form-group mb-30">
                       <input
-                        id="form_subject"
+                        
                         type="text"
                         name="subject"
                         placeholder="Subject"
+                        required="required"
                         value={form.subject}
                         onChange={handleChange}
                       />
@@ -166,11 +167,11 @@ function Contact() {
                   <div className="col-12">
                     <div className="form-group">
                       <textarea
-                        id="form_message"
+                        
                         name="message"
                         placeholder="Message"
                         rows="4"
-                    
+                        required="required"
                         value={form.message}
                         onChange={handleChange}
                       ></textarea>
