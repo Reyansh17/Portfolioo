@@ -45,8 +45,8 @@ function Contact() {
     console.log("Message:", form.message);
     
     emailjs.send(
-      'service_uige2aa',
-      'template_au99tio',
+      'service_cw2ci7n',
+      'template_e0qkqbx',
       {
         from_name: form.name,
         to_name: "Reyansh Gahlot",
@@ -55,7 +55,7 @@ function Contact() {
         from_subject: form.subject,
         from_message: form.message,
       },
-      '4VlaCkKCEWTAnBx6i'
+      'nZFn9y8inZrE6ZsoE'
     )
     .then(() => {
       setIsSubmitting(false);

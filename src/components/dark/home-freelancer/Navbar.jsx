@@ -10,7 +10,7 @@ function Navbar() {
             <img src="/dark/assets/imgs/Reyanshlogo.png" alt="logo" />
           </a>
 
-          <button
+          {/* <button
             className="navbar-toggler block lg:hidden"
             type="button"
             data-toggle="collapse"
@@ -22,7 +22,7 @@ function Navbar() {
             <span className="icon-bar">
               <i className="fas fa-bars"></i>
             </span>
-          </button>
+          </button> */}
 
           <div
             className="collapse navbar-collapse justify-content-center hidden lg:flex"
