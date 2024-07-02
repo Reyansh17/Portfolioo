@@ -8,7 +8,7 @@ function Contact() {
   const [form, setForm] = useState({
     name: "",
     email: "",
-    subject: "",
+    subject: "Default Subject", // Set a default subject since it's hidden
     message: "",
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -54,13 +54,17 @@ function Contact() {
     };
 
     try {
-      const res = await axios.post("https://api.emailjs.com/api/v1.0/email/send", data);
+      const res = await axios.post("https://api.emailjs.com/api/v1.0/email/send", data, {
+        headers: {
+          'Content-Type': 'application/json',
+        },
+      });
       console.log(res.data);
       setIsSubmitting(false);
       setForm({
         name: "",
         email: "",
-        subject: "",
+        subject: "Default Subject",
         message: "",
       });
       toast.success("Your message has been sent");
@@ -151,13 +155,12 @@ function Contact() {
                     </div>
                   </div>
 
-                  <div className="col-12">
+                  <div className="col-12" style={{ display: 'none' }}>
                     <div className="form-group mb-30">
                       <input
                         type="text"
                         name="subject"
                         placeholder="Subject"
-                        required="required"
                         value={form.subject}
                         onChange={handleChange}
                       />
