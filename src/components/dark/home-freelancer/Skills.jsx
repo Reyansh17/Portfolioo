@@ -86,7 +86,7 @@ function Skills() {
                   <img src="/dark/assets/imgs/resume/s6.png" alt="Graphic Design" style={imgInnerStyle} />
                 </div>
               </div>
-              <h6 className="fz-18 mt-10 text-center">Digital Marketing</h6>
+              <h6 className="fz-18 mt-10 text-center">Digital M</h6>
             </div>
           </div>
         </div>
