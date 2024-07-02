@@ -1,6 +1,6 @@
 'use client';
 import React, { useEffect, useRef, useState } from 'react';
-import emailjs from '@emailjs/browser';
+import axios from 'axios';
 import toast, { Toaster } from 'react-hot-toast';
 
 function Contact() {
@@ -10,11 +10,9 @@ function Contact() {
     email: "",
     subject: "",
     message: "",
-   
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isVisible, setVisible] = useState(false);
-  
   const domRef = useRef();
 
   const handleChange = (e) => {
@@ -29,48 +27,48 @@ function Contact() {
     const observer = new IntersectionObserver((entries) => {
       entries.forEach((entry) => setVisible(entry.isIntersecting));
     });
-  
+
     const currentRef = domRef.current;
     observer.observe(currentRef);
     return () => observer.unobserve(currentRef);
   }, []);
 
-  const sendEmail = (e) => {
+  const sendEmail = async (e) => {
     e.preventDefault();
     setIsSubmitting(true);
-    console.log("Sending Email with the following data:");
-    console.log("Name:", form.name);
-    console.log("Email:", form.email);
-    console.log("Subject:", form.subject);
-    console.log("Message:", form.message);
-    
-    emailjs.send(
-      'service_cw2ci7n',
-      'template_e0qkqbx',
-      {
+
+    const serviceId = "service_cw2ci7n";
+    const templateId = "template_e0qkqbx";
+    const publicKey = "nZFn9y8inZrE6ZsoE";
+
+    const data = {
+      service_id: serviceId,
+      template_id: templateId,
+      user_id: publicKey,
+      template_params: {
         from_name: form.name,
-        to_name: "Reyansh Gahlot",
         from_email: form.email,
-        to_email: "rgahlot_be22@thapar.edu",
-        from_subject: form.subject,
-        from_message: form.message,
+        subject: form.subject,
+        message: form.message,
       },
-      'nZFn9y8inZrE6ZsoE'
-    )
-    .then(() => {
+    };
+
+    try {
+      const res = await axios.post("https://api.emailjs.com/api/v1.0/email/send", data);
+      console.log(res.data);
       setIsSubmitting(false);
-      alert("Thank you. I will get back to you as soon as possible.");
       setForm({
         name: "",
         email: "",
         subject: "",
         message: "",
       });
-    }, (error) => {
-      setIsSubmitting(false);
-      alert("Ahh, something went wrong. Please try again.");
+      toast.success("Your message has been sent");
+    } catch (error) {
       console.error(error);
-    });
+      setIsSubmitting(false);
+      toast.error("Ahh, something went wrong. Please try again.");
+    }
   };
 
   return (
@@ -91,7 +89,7 @@ function Contact() {
                 ref={domRef}
               >
                 <span className="rotate-text">
-                  Let&#39;s Connect
+                  Let's Connect
                   <span className="fw-200">Collaborate and Innovate Together!</span>
                 </span>
               </h2>
@@ -108,7 +106,6 @@ function Contact() {
                     <span className="hover-anim">Github</span>
                   </a>
                 </li>
-                
                 <li className="mr-30">
                   <a href="https://www.linkedin.com/in/reyanshgahlot/" className="hover-this">
                     <span className="hover-anim">LinkedIn</span>
@@ -131,7 +128,6 @@ function Contact() {
                   <div className="col-lg-6">
                     <div className="form-group mb-30">
                       <input
-                      
                         type="text"
                         name="name"
                         placeholder="Name"
@@ -145,7 +141,6 @@ function Contact() {
                   <div className="col-lg-6">
                     <div className="form-group mb-30">
                       <input
-                      
                         type="email"
                         name="email"
                         placeholder="Email"
@@ -159,7 +154,6 @@ function Contact() {
                   <div className="col-12">
                     <div className="form-group mb-30">
                       <input
-                        
                         type="text"
                         name="subject"
                         placeholder="Subject"
@@ -173,7 +167,6 @@ function Contact() {
                   <div className="col-12">
                     <div className="form-group">
                       <textarea
-                        
                         name="message"
                         placeholder="Message"
                         rows="4"
