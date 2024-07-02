@@ -1,80 +1,92 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 function Skills() {
+  useEffect(() => {
+    AOS.init({ duration: 1000 });
+  }, []);
+
+  const imgStyle = {
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center',
+    height: '100px',
+  };
+
+  const imgInnerStyle = {
+    maxWidth: '100%',
+    maxHeight: '100%',
+  };
+
   return (
     <div className="my-skills2">
       <div className="container">
         <div className="sec-head text-center mb-80">
-          <h6 className="sub-title main-color mb-15"></h6>
-          <h2>
-            My Skills &<span className="fw-200">Expertise</span>
+          <h6 className="sub-title main-color mb-15" data-aos="fade-down">Professional Skills</h6>
+          <h2 data-aos="fade-up">
+            My Skills & <span className="fw-200">Expertise</span>
           </h2>
         </div>
         <div className="row md-marg">
           <div className="col-lg-2 col-md-4 col-6">
-            <div className="item mb-30">
+            <div className="item mb-30" data-aos="zoom-in">
               <div className="box-bord main-bg">
-                <div className="img">
-                  <img src="/dark/assets/imgs/resume/s1.png" alt="" />
+                <div className="img" style={imgStyle}>
+                  <img src="/dark/assets/imgs/resume/s1.png" alt="UI / UX Design" style={imgInnerStyle} />
                 </div>
-                <span className="value">95%</span>
               </div>
-              <h6 className="fz-18">UI / UX Design</h6>
+              <h6 className="fz-18 mt-10 text-center">UI / UX Design</h6>
             </div>
           </div>
           <div className="col-lg-2 col-md-4 col-6">
-            <div className="item mb-30">
+            <div className="item mb-30" data-aos="zoom-in" data-aos-delay="100">
               <div className="box-bord main-bg">
-                <div className="img">
-                  <img src="/dark/assets/imgs/resume/s2.png" alt="" />
+                <div className="img" style={imgStyle}>
+                  <img src="/dark/assets/imgs/resume/s2.png" alt="Development" style={imgInnerStyle} />
                 </div>
-                <span className="value">90%</span>
               </div>
-              <h6 className="fz-18">Development</h6>
+              <h6 className="fz-18 mt-10 text-center">Development</h6>
             </div>
           </div>
           <div className="col-lg-2 col-md-4 col-6">
-            <div className="item mb-30">
+            <div className="item mb-30" data-aos="zoom-in" data-aos-delay="200">
               <div className="box-bord main-bg">
-                <div className="img">
-                  <img src="/dark/assets/imgs/resume/s3.png" alt="" />
+                <div className="img" style={imgStyle}>
+                  <img src="/dark/assets/imgs/resume/s3.png" alt="Graphic Design" style={imgInnerStyle} />
                 </div>
-                <span className="value">85%</span>
               </div>
-              <h6 className="fz-18">Graphic Design</h6>
+              <h6 className="fz-18 mt-10 text-center">Graphic Design</h6>
             </div>
           </div>
           <div className="col-lg-2 col-md-4 col-6">
-            <div className="item mb-30">
+            <div className="item mb-30" data-aos="zoom-in" data-aos-delay="300">
               <div className="box-bord main-bg">
-                <div className="img">
-                  <img src="/dark/assets/imgs/resume/s5.png" alt="" />
+                <div className="img" style={imgStyle}>
+                  <img src="/dark/assets/imgs/resume/s5.png" alt="Sketch" style={imgInnerStyle} />
                 </div>
-                <span className="value">84%</span>
               </div>
-              <h6 className="fz-18">Sketch</h6>
+              <h6 className="fz-18 mt-10 text-center">Sketch</h6>
             </div>
           </div>
           <div className="col-lg-2 col-md-4 col-6">
-            <div className="item mb-30">
+            <div className="item mb-30" data-aos="zoom-in" data-aos-delay="400">
               <div className="box-bord main-bg">
-                <div className="img">
-                  <img src="/dark/assets/imgs/resume/s4.png" alt="" />
+                <div className="img" style={imgStyle}>
+                  <img src="/dark/assets/imgs/resume/s4.png" alt="WordPress" style={imgInnerStyle} />
                 </div>
-                <span className="value">78%</span>
               </div>
-              <h6 className="fz-18">WordPress</h6>
+              <h6 className="fz-18 mt-10 text-center">WordPress</h6>
             </div>
           </div>
           <div className="col-lg-2 col-md-4 col-6">
-            <div className="item mb-30">
+            <div className="item mb-30" data-aos="zoom-in" data-aos-delay="500">
               <div className="box-bord main-bg">
-                <div className="img">
-                  <img src="/dark/assets/imgs/resume/s6.png" alt="" />
+                <div className="img" style={imgStyle}>
+                  <img src="/dark/assets/imgs/resume/s6.png" alt="Graphic Design" style={imgInnerStyle} />
                 </div>
-                <span className="value">85%</span>
               </div>
-              <h6 className="fz-18">Graphic Design</h6>
+              <h6 className="fz-18 mt-10 text-center">Digital Marketing</h6>
             </div>
           </div>
         </div>
