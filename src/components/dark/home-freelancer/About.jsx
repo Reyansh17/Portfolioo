@@ -104,7 +104,7 @@ function About() {
                 className="butn butn-md main-colorbg radius-30 mt-40"
                 target='_blank'
               >
-                <span className="text-dark">Dwonload CV</span>
+                <span className="text-dark">Download CV</span>
               </a>
             </div>
           </div>
