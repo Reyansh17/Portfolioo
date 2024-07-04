@@ -67,6 +67,7 @@ function Contact() {
         subject: "Default Subject",
         message: "",
       });
+      alert('I wil contact you soon')
       toast.success("Your message has been sent");
     } catch (error) {
       console.error(error);
@@ -125,7 +126,7 @@ function Contact() {
           </div>
           <div className="col-lg-6 offset-lg-1 valign">
             <div className="full-width">
-              <form id="contact-form" ref={formRef} onSubmit={sendEmail}>
+              <form  ref={formRef} onSubmit={sendEmail}>
                 <div className="messages"></div>
 
                 <div className="controls row">
